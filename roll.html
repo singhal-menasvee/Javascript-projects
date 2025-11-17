@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+   }
+   #mybtn{
+    padding: 10px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 3em;
+    background-color: aquamarine;
+
+   }
+   .mylabels{
+
+   }
+</style>
+<body>
+    <h1>Roll Dice</h1>
+    <button id="mybtn">Roll</button><br><br><br>
+    <label id="myLabel1" class="mylabels"></label>
+    <label id="myLabel2" class="mylabels"></label>
+    <label id="myLabel3" class="mylabels"></label>
+    <script>
+        const mybtn= document.getElementById("mybtn");
+        const myLabel1= document.getElementById("myLabel1");
+        const myLabel12= document.getElementById("myLabel2");
+        const myLabel3= document.getElementById("myLabel3");
+        const min=1;
+        const max=6;
+        let randomNum1;
+        let randomNum2;
+        let randomNum3;
+        mybtn.onclick= function(){
+            randomNum1= Math.floor(Math.random()*max)+min;
+            randomNum2= Math.floor(Math.random()*max)+min;
+            randomNum3= Math.floor(Math.random()*max)+min;
+            myLabel1.textContent= randomNum1;
+            myLabel2.textContent= randomNum2;
+            myLabel3.textContent= randomNum3;
+        }
+
+
+
+    </script>
+</body>
+</html>
